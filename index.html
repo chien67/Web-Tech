@@ -1,39 +1,279 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Web Đồ Công Nghệ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
-    <div class="jumbotron text-center">
-        <h1>My First Bootstrap Page</h1>
-        <p>Resize this responsive page to see the effect!</p>
-    </div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Store</a>
+        </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>Column 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#Tablets">Tablets</a>
+                </li>
+                <li class="active">
+                    <a href="#Laptops">Laptops</a>
+                </li>
+                <li class="active">
+                    <a href="#Mobiles">Mobiles</a>
+                </li>
+            </ul>
         </div>
     </div>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#Tablets" class="pull-right">View all Tablets</a>
+                    <form action="/Home/Filter?category=Tablets" class="navbar-form" method="post"><input class="form-control" id="gadgetName" name="gadgetName" placeholder="Search in Tablets" type="text" value="" /></form>
+                </div>
 
-</body>
+                <div class="panel-body">
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="/image/prontotec.jpg" class="media-object">
+                        </a>
+
+                        <div class="media-body">
+                            <h3 class="mediaheading">
+                                ProtoTec 7
+                            </h3>
+                            <p>Android 4.4 KitKat Tablet PC, Cortex A8 1.2 GHz Dual Core Processor,512MB / 4GB,Dual Camera,G-Sensor (Black)</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="/image/samsung-galaxy.jpg" class="media-object">
+                        </a>
+
+                        <div class="media-body">
+                            <h3 class="mediaheading">
+                                Samsung Galaxy
+                            </h3>
+                            <p>Android 4.4 Kit Kat OS, 1.2 GHz quad-core processor</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="image/asus-memo.jpg" />
+                        </a>
+                        <div class="media-body">
+                            <h3 class="media-heading">
+                                ASUS MeMO
+                            </h3>
+                            <p>Pad 7 ME170CX-A1-BK 7-Inch 16GB Tablet. Dual-Core Intel Atom Z2520 1.2GHz CPU</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <form action="/Home/Create" class="form-inline" enctype="multipart/form-data" method="post"><input id="GadgetCategory" name="GadgetCategory" type="hidden" value="1" />                        
+                        
+                    <div class="form-group">
+                        <label class="sr-only" for="file">File</label>
+                        <input type="file" class="form-control" name="file" placeholder="Select picture..">
+                    </div>
+
+                     <div class="form-group">
+                        <label class="sr-only" for="gadgetTitle">Title</label>
+                        <input type="text" class="form-control" name="gadgetTitle" placeholder="Title">
+                    </div>
+                
+                   <div class="form-group">
+                        <label class="sr-only" for="gadgetName">Price</label>
+                        <input type="number" class="form-control" name="gadgetPrice" placeholder="Price">
+                    </div>
+
+                     <div class="form-group">
+                         <label class="sr-only" for="gadgetName">Description</label>
+                         <input type="text" class="form-control" name="gadgetDescription" placeholder="Description">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                    </form>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#Laptops" class="pull-right">View all Laptops</a>
+                    <form action="#Laptops" class="navbar-form" method="post"><input class="form-control" id="gadgetName" name="gadgetName" placeholder="Search in Laptops" type="text" value="" /></form>
+                </div>
+
+                <div class="panel-body">
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="/image/asus-latest.jpg" class="media-object">
+                        </a>
+
+                        <div class="media-body">
+                            <h3 class="mediaheading">
+                                ASUS 15.6-Inch
+                            </h3>
+                            <p>Latest Generation Intel Dual Core Celeron 2.16 GHz Processor (turbo to 2.41 GHz)</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="/image/hp-pavilion.jpg" class="media-object">
+                        </a>
+
+                        <div class="media-body">
+                            <h3 class="mediaheading">
+                                HP Pavilion 15-r030wm
+                            </h3>
+                            <p>This Certified Refurbished product is manufacturer refurbished, shows limited or no wear, and includes all original accessories plus a 90-day warranty</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="image/dell-inspiron.jpg" />
+                        </a>
+                        <div class="media-body">
+                            <h3 class="media-heading">
+                                Dell Inspiron 15.6-Inch
+                            </h3>
+                            <p>Intel Celeron N2830 Processor, 15.6-Inch Screen, Intel HD Graphics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <form action="/Home/Create" class="form-inline" enctype="multipart/form-data" method="post"><input id="GadgetCategory" name="GadgetCategory" type="hidden" value="1" />                        
+                        
+                    <div class="form-group">
+                        <label class="sr-only" for="file">File</label>
+                        <input type="file" class="form-control" name="file" placeholder="Select picture..">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="sr-only" for="gadgetTitle">Title</label>
+                        <input type="text" class="form-control" name="gadgetTitle" placeholder="Title">
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="sr-only" for="gadgetName">Price</label>
+                        <input type="number" class="form-control" name="gadgetPrice" placeholder="Price">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="sr-only" for="gadgetName">Description</label>
+                        <input type="text" class="form-control" name="gadgetDescription" placeholder="Description">
+                    </div>
+
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </form>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#Mobile" class="pull-right">View all Mobiles</a>
+                    <form action="#Mobile" class="navbar-form" method="post"><input class="form-control" id="gadgetName" name="gadgetName" placeholder="Search in Mobiles" type="text" value="" /></form>
+                </div>
+
+                <div class="panel-body">
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="/image/nokia-lumia.jpg" class="media-object">
+                        </a>
+
+                        <div class="media-body">
+                            <h3 class="mediaheading">
+                                Nokia Lumia 521
+                            </h3>
+                            <p>T-Mobile Cell Phone 4G - White. 5MP Camera - Snap creative photos with built-in digital lenses</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="/image/htc-desire.jpg" class="media-object">
+                        </a>
+
+                        <div class="media-body">
+                            <h3 class="mediaheading">
+                                HTC Desire 816
+                            </h3>
+                            <p>13 MP Rear Facing BSI Camera / 5 MP Front Facing</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="image/sanyo-innuendo.jpg" />
+                        </a>
+                        <div class="media-body">
+                            <h3 class="media-heading">
+                                Sanyo Innuendo
+                            </h3>
+                            <p>Uniquely designed 3G-enabled messaging phone with side-flipping QWERTY keyboard and external glow-thru OLED dial pad that &#39;disappears&#39; when not in use</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <form action="/Home/Create" class="form-inline" enctype="multipart/form-data" method="post"><input id="GadgetCategory" name="GadgetCategory" type="hidden" value="1" />                        
+                        
+                    <div class="form-group">
+                        <label class="sr-only" for="file">File</label>
+                        <input type="file" class="form-control" name="file" placeholder="Select picture..">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="sr-only" for="gadgetTitle">Title</label>
+                        <input type="text" class="form-control" name="gadgetTitle" placeholder="Title">
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="sr-only" for="gadgetName">Price</label>
+                        <input type="number" class="form-control" name="gadgetPrice" placeholder="Price">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="sr-only" for="gadgetName">Description</label>
+                        <input type="text" class="form-control" name="gadgetDescription" placeholder="Description">
+                    </div>
+
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
 </html>
